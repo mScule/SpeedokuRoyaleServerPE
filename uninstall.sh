@@ -21,11 +21,11 @@ then
 elif [[ $ANSWER == "y" || $ANSWER == "Y" ]];
 then
     info "Removing db container..."
-    docker rm sr-db-de-container
+    docker rm sr-db-pe-container
 
     echo
     info "Removing server de container..."
-    docker rm sr-server-de-container
+    docker rm sr-server-pe-container
 
     echo
     info "Removing db image..."
@@ -33,11 +33,11 @@ then
 
     echo
     info "Removing server de image..."
-    docker image rm speedoku-royale-server-de
+    docker image rm speedoku-royale-server-pe
 
     echo
     info "Removing de network..."
-    docker network rm sr-de-network
+    docker network rm sr-pe-network
 
     echo
     success "Uninstall complete!"
