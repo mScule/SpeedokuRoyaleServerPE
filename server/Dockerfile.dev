@@ -1,0 +1,22 @@
+FROM ubuntu:22.04
+
+WORKDIR /home/speedoku-royale-server
+
+# Copy the cloned repo and appsetting files
+COPY ./SpeedokuRoyaleServer .
+COPY ./appsettings.Development.json .
+COPY ./appsettings.json .
+
+# Install .NET 6, CA-Certificates, Git, and SSH
+RUN \
+    apt-get update && \
+    apt-get install -y \
+        dotnet6 \
+        git
+
+# Install Entity framework cli tools
+RUN dotnet tool install --global dotnet-ef
+
+EXPOSE 8000:8000
+
+ENTRYPOINT ["tail", "-f", "/dev/null"]
