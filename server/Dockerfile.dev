@@ -4,7 +4,7 @@ WORKDIR /home/speedoku-royale-server
 
 # Copy the cloned repo and appsetting files
 COPY ./SpeedokuRoyaleServer .
-COPY ./appsettings.Development.json .
+COPY ./appsettings.Production.json .
 COPY ./appsettings.json .
 
 # Install .NET 6, CA-Certificates, Git, and SSH
