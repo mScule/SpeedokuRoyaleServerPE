@@ -6,5 +6,5 @@ source cli/components.sh
 
 # Stopping containers
 info "Development environment shutting down..."
-docker stop sr-db-de-container
-docker stop sr-server-de-container
+docker stop sr-db-pe-container
+docker stop sr-server-pe-container
