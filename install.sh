@@ -39,7 +39,7 @@ info "building db image..."
 docker build -f db/Dockerfile.dev -t speedoku-royale-db db/
 
 echo
-info "building server de image..."
+info "building server pe image..."
 docker build -f server/Dockerfile.dev -t speedoku-royale-server-pe server/
 
 echo
@@ -48,18 +48,18 @@ success "The server and db image, and network has been built :)"
 echo
 info "Creating containers from the images..."
 docker run -d \
-    --name    sr-db-de-container \
-    --network sr-de-network \
+    --name    sr-db-pe-container \
+    --network sr-pe-network \
     --publish 3306:3306 \
     speedoku-royale-db
 
 docker run -d \
-    --name    sr-server-de-container \
-    --network sr-de-network \
+    --name    sr-server-pe-container \
+    --network sr-pe-network \
     --publish 8000:8000 \
-    speedoku-royale-server-de
+    speedoku-royale-server-pe
 
 # User opens the environment in VS Code...
 header "Opening the environment for the first time:"
-point "Open the \"speedoku-royale-server-de\" container with VS Code Remote explorer."
+point "Open the \"speedoku-royale-server-pe\" container with VS Code Remote explorer."
 point "Open the folder from path /home/speedoku-royale-server"
