@@ -36,7 +36,7 @@ docker network create sr-pe-network
 
 echo
 info "building db image..."
-docker build -f db/Dockerfile.dev -t speedoku-royale-db db/
+docker build -f db/Dockerfile.dev -t speedoku-royale-db-pe db/
 
 echo
 info "building server pe image..."
@@ -51,7 +51,7 @@ docker run -d \
     --name    sr-db-pe-container \
     --network sr-pe-network \
     --publish 3306:3306 \
-    speedoku-royale-db
+    speedoku-royale-db-pe
 
 docker run -d \
     --name    sr-server-pe-container \
