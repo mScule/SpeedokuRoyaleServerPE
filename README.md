@@ -1,28 +1,29 @@
 # SpeedokuRoyaleServer | Production environment
+Consists of two running containers linked together with docker network.
 
-Run the shell scripts in git bash by writing command
-`bash <SCRIPT NAME HERE WITH IT'S FILE EXTENSION>`
+- **sr-network** The network that links the database and server together.
+- **sr-db-instance** The container based of the database image.
+- **sr-server-instance** The container based of the server image.
 
-## Setup
+The environment is controlled with scripts found in **ci** directory.
 
-1. Run the `install.sh` *Make sure that you have the things installed that the
-   setup asks for! Don't lie to it. The setup won't work right if you do :(*
+## CI Scripts
+Scripts control two different sections of the environment, the **base** and the
+**server**.
 
-2. After the setup has done it's job, you should be able to open the project
-   with the VS Code Remote Explorer.
+### Base
+Consists of the **sr-network** and the **sr-db** and the **sr-db-instance**.
 
-3. From docker container, open path `home/speedoku-royale-server`
+### Server
+Consists of the **sr-server** and the **sr-server-instance**.
 
-4. Write `dotnet ef database update`
+### Start scripts
+Builds images, creates networks and containers from the built images in the
+section.
 
-5. After that, write `dotnet run`
+### Stop scripts
+Removes the containers, networks and images in the section.
 
-
-To build and run the build, use `build.sh`.
-To shut down and remove the build, use `shutdown.sh`.
-
-## Uninstall
-
-If you feel that the setup messed up your docker big time, you can uninstall
-everything with `uninstall.sh`. Do this only if you don't have anything
-important in the de, since every file in it will be removed.
+## Usage
+To make sure that the server goes live in the right way, ensure that you have
+the base live first.
