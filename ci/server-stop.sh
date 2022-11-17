@@ -8,9 +8,9 @@ header "Server going down..."
     docker stop sr-server-instance
 echo
 
-header "Removing Containers"
-    info "Removing server container..."
-    docker container rm sr-server-instance
+header "Removing Containers and Volumes"
+    info "Removing server container and volume..."
+    docker container rm --volumes sr-server-instance
 echo
 
 header "Removing Images"

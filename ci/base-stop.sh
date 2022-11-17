@@ -8,9 +8,9 @@ header "Base going down..."
     docker stop sr-db-instance
 echo
 
-header "Removing Containers"
-    info "Removing db container..."
-    docker container rm sr-db-instance
+header "Removing Containers and Volumes"
+    info "Removing db container and volume..."
+    docker container rm --volumes sr-db-instance
 echo
 
 header "Removing Networks"
