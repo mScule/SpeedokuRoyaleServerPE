@@ -1,3 +1,5 @@
+# This script stops and removes the server image and instance (container).
+
 source ../cli/text-styling.sh
 source ../cli/components.sh
 

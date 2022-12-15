@@ -25,5 +25,14 @@ section.
 Removes the containers, networks and images in the section.
 
 ## Usage
+First thing that you want to do when setting this up for the VERY FIRST time is
+that you want to clone the SpeedokuRoyaleServer project from the github into the
+server folder, so that the server folder contains the SpeedokuRoyaleServer
+project folder.
+
 To make sure that the server goes live in the right way, ensure that you have
 the base live first.
+
+## Documentation
+If you want to know what every script does, they have comments that summarize
+their actions.

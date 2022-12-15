@@ -1,3 +1,5 @@
+# This script contains different coloring modes supported by bash terminal.
+
 # Black
 BLACK="30"
 BLACK_BG="40"

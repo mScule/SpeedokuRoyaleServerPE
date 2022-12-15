@@ -1,3 +1,8 @@
+# This script starts the base for the server.
+# Base contains the shared network between the server container and db
+# container, and the db container itself.
+# This is driven only once when you setup the project on the host.
+
 source ../cli/text-styling.sh
 source ../cli/components.sh
 

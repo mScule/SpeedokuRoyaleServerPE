@@ -1,3 +1,6 @@
+# Stops the instance of db container and removes it and the shared network.
+# RUN THIS ONLY AFTER YOU HAVE STOPPED THE SERVER
+
 source ../cli/text-styling.sh
 source ../cli/components.sh
 

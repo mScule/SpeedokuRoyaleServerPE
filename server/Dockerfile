@@ -1,3 +1,4 @@
+# Base image used for hosting the server is Ubuntu 22.04
 FROM ubuntu:22.04
 
 # Install .NET 6 and Git

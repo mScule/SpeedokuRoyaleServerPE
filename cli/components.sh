@@ -1,3 +1,5 @@
+# Contains "Components" for showing text in the terminal differently
+
 header () {
     style $BOLD
     echo -e $1

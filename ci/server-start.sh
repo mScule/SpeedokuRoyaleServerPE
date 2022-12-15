@@ -1,3 +1,5 @@
+# This script builds and starts the server container.
+
 source ../cli/text-styling.sh
 source ../cli/components.sh
 
